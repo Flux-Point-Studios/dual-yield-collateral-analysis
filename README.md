@@ -30,7 +30,7 @@ Strike's SLP holds a 1:1 USD-backed balance, so borrowed USDM enters as USD and 
 
 > ⚠️ A **fee** yield, **not** principal-protected: SLP LPs are the traders' counterparty and *can lose*. In a bad week the deployed USDM can drop below the debt you must repay. DefiLlama revenue does not net trader PnL.
 
-**FluidTokens** *(docs.fluidtokens.com)* — P2P; lenders set USDM-pool APR + whitelist collateral. Borrow cap ≈66%, liquidation 80%, penalty 10%. **Borrow APR ≈10% (estimate — no public API**, lender-set; modeled 6%–15%).
+**FluidTokens** ([docs.fluidtokens.com/cardano/lending](https://docs.fluidtokens.com/cardano/lending/)) — P2P; lenders fund USDM pools + whitelist collateral. Standardized, protocol-fixed for liquid assets: **borrow up to 66% LTV · liquidation at 80% · 10% penalty** (split 5% lender / 5% protocol) — all candidates here sit in this standardized bucket. **Borrow APR ≈10% (estimate** — lender-set per pool, no public rate API; modeled 6%–15%).
 
 **USDM** — $0.9988 (~peg, Moneta Digital, fiat-backed).
 
@@ -162,7 +162,7 @@ All figures are live as of 2026-06-07, scored through Flux Point Studios' token-
 |---|---|
 | Price, 24h/30d volume, market cap, realized volatility, drawdown | CoinGecko + on-chain Cardano DEX aggregation |
 | Strike V2 SLP TVL + fee revenue → annualized yield | DefiLlama (`strike-finance-perpetuals`) |
-| Fluid LTV cap / liquidation threshold / penalty | FluidTokens documentation |
+| Fluid LTV cap (66%) / liquidation (80%) / penalty (10%) | [FluidTokens docs](https://docs.fluidtokens.com/cardano/lending/) — V3, audited by Vacuum Labs (Aug 2025) |
 | **Holder count + top-10 concentration** | On-chain Cardano holder analytics (BendingAI) |
 | USDM peg | Moneta Digital (~$1, fiat-backed) |
 
@@ -171,4 +171,4 @@ The holder-concentration figures are the differentiator here — price and volum
 **Caveats.** The USDM borrow APR is an estimate (Fluid is peer-to-peer; lenders set rates per pool) and is modeled across a 6–15% range. The Strike SLP yield is a *trailing fee* figure and does **not** net out trader PnL — SLP providers are the traders' counterparty and can incur losses (see §7). Forward scenarios are illustrations, not guarantees.
 
 ---
-*Sources: DefiLlama, CoinGecko, Strike Finance docs, FluidTokens docs, BendingAI (on-chain holder data). Data as of 2026-06-07. Not financial advice — for FPS/partner internal strategy assessment.*
+*Sources: DefiLlama, CoinGecko, Strike Finance docs, [FluidTokens docs](https://docs.fluidtokens.com/cardano/lending/), BendingAI (on-chain holder data). Data as of 2026-06-07. Not financial advice — for FPS/partner internal strategy assessment.*
